@@ -322,6 +322,38 @@ section { padding: 100px 5%; }
 .form-group select option { background: #0d1626; }
 .form-group textarea { resize: vertical; min-height: 100px; }
 
+/* ── Multi-select chips ── */
+.label-note { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; margin-left: 0.3rem; }
+.service-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 0.5rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.52rem 1.1rem; border-radius: 100px;
+  border: 1px solid var(--dark-border);
+  background: rgba(13,22,38,0.8);
+  color: var(--text-muted); cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  font-size: 0.875rem; user-select: none;
+}
+.chip input[type="checkbox"] { display: none; }
+.chip-check {
+  width: 15px; height: 15px; border-radius: 50%;
+  border: 1.5px solid var(--dark-border);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 700; color: transparent;
+  transition: all .2s ease; flex-shrink: 0; line-height: 1;
+}
+.chip:hover { border-color: rgba(96,165,250,0.45); color: var(--blue-shine); }
+.chip:hover .chip-check { border-color: rgba(96,165,250,0.45); }
+.chip:has(input:checked) {
+  border-color: var(--blue-glow);
+  background: rgba(59,130,246,0.13);
+  color: var(--white);
+  box-shadow: 0 0 14px rgba(59,130,246,0.18);
+}
+.chip:has(input:checked) .chip-check {
+  background: var(--blue-glow); border-color: var(--blue-glow); color: #04080f;
+}
+
 .btn-form {
   width: 100%;
   background: linear-gradient(135deg, var(--blue-metal), var(--blue-bright));

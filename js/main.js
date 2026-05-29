@@ -23,7 +23,12 @@ window.addEventListener('scroll', function () {
 function handleSubmit(e) {
   e.preventDefault();
   var btn = e.target.querySelector('.btn-form');
-  btn.textContent = '✅ ¡Consulta enviada! Te contactamos pronto.';
+  var checks = e.target.querySelectorAll('input[name="servicios"]:checked');
+  var servicios = Array.from(checks).map(function(c){ return c.value; });
+  var msg = servicios.length
+    ? '✅ ¡Consulta enviada! Te contactamos pronto.'
+    : '✅ ¡Consulta enviada! Te contactamos pronto.';
+  btn.textContent = msg;
   btn.style.background = 'linear-gradient(135deg,#059669,#10b981)';
   btn.disabled = true;
 }

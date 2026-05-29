@@ -495,15 +495,34 @@
           </div>
         </div>
         <div class="form-group">
-          <label>¿Qué servicio te interesa?</label>
-          <select>
-            <option value="">Selecciona una opción</option>
-            <option>Diseño Web</option>
-            <option>Marketing Digital</option>
-            <option>Automatizaciones con IA</option>
-            <option>Pack todo-en-uno</option>
-            <option>No lo sé todavía, quiero asesoramiento</option>
-          </select>
+          <label>¿Qué servicios te interesan? <span class="label-note">(podés elegir más de uno)</span></label>
+          <div class="service-chips">
+            <label class="chip">
+              <input type="checkbox" name="servicios" value="Diseño Web"/>
+              <span class="chip-check">✓</span>
+              <span>Diseño Web</span>
+            </label>
+            <label class="chip">
+              <input type="checkbox" name="servicios" value="Marketing Digital"/>
+              <span class="chip-check">✓</span>
+              <span>Marketing Digital</span>
+            </label>
+            <label class="chip">
+              <input type="checkbox" name="servicios" value="Automatizaciones con IA"/>
+              <span class="chip-check">✓</span>
+              <span>Automatizaciones con IA</span>
+            </label>
+            <label class="chip">
+              <input type="checkbox" name="servicios" value="Pack todo-en-uno"/>
+              <span class="chip-check">✓</span>
+              <span>Pack todo-en-uno</span>
+            </label>
+            <label class="chip">
+              <input type="checkbox" name="servicios" value="Asesoramiento"/>
+              <span class="chip-check">✓</span>
+              <span>No lo sé, quiero asesoramiento</span>
+            </label>
+          </div>
         </div>
         <div class="form-group">
           <label>Cuéntanos sobre tu negocio</label>
